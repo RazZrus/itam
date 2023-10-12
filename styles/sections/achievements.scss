@@ -1,0 +1,53 @@
+section.achievements {
+	margin-top: 150px;
+
+	h2 {
+		color: white;
+		font-size: 4rem;
+		text-align: center;
+		font-weight: 800;
+		margin-bottom: 24px;
+	}
+}
+
+ul.year-list {
+	display: flex;
+	gap: 40px;
+	list-style: none;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+li.year-list-item {
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	font-weight: 400;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: white;
+	}
+
+	&.selected {
+		color: white;
+		font-weight: 800;
+	}
+}
+
+ul.achievements-list {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	list-style: none;
+	font-size: 2rem;
+}
+
+li.achievements-list-item {
+	display: flex;
+	justify-content: space-between;
+
+	p.place {
+		color: white;
+		font-weight: 700;
+	}
+}

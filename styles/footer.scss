@@ -1,0 +1,56 @@
+footer {
+	width: 1170px;
+	margin: 0 auto;
+	height: 140px;
+	margin-top: 40px;
+	margin-bottom: 70px;
+	position: relative;
+
+	img.logo {
+		height: 20px;
+		width: 60px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	p.year {
+		color: white;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	ul.footer-nav {
+		position: absolute;
+		top: 0;
+		left: 200px;
+		display: flex;
+		list-style: none;
+		gap: 43px;
+	}
+
+	ul.authors-list {
+		position: absolute;
+		right: 0;
+		display: flex;
+		list-style: none;
+		gap: 50px;
+	}
+
+	li.authors-list-item {
+		height: 140px;
+
+		p.name {
+			margin-top: 24px;
+			font-size: 1.25rem;
+			color: white;
+			font-weight: 500;
+		}
+
+		img.social {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

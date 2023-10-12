@@ -1,0 +1,63 @@
+$darkGrayColor: #1e1d1c;
+$grayColor: #ffffff7a;
+
+$standardSize: 20px;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $darkGrayColor;
+	color: $grayColor;
+	font-family: 'Manrope', sans-serif;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+img {
+	max-width: 100vw;
+}
+
+section {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+main {
+	height: fit-content;
+	margin: 0 auto;
+}
+
+@media (max-width: 1170px) {
+	section {
+		width: 100vw;
+	}
+}
+
+@import './uikit.scss';
+@import './header.scss';
+@import './sections/main.scss';
+@import './sections/info.scss';
+@import './sections/projects.scss';
+@import './sections/partners.scss';
+@import './sections/teams.scss';
+@import './sections/media.scss';
+@import './sections/achievements.scss';
+@import './sections/team.scss';
+@import './sections/socials.scss';
+@import './footer.scss';

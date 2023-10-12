@@ -1,0 +1,942 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1d1c;
+  color: rgba(255, 255, 255, 0.4784313725);
+  font-family: "Manrope", sans-serif;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 100vw;
+}
+
+section {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+main {
+  height: fit-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 1170px) {
+  section {
+    width: 100vw;
+  }
+}
+header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #1e1d1c;
+  z-index: 1;
+}
+
+nav {
+  width: 1170px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+a.logo-link {
+  display: flex;
+  justify-content: center;
+}
+
+ul.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+li.main-nav-list-item a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4784313725);
+  font-size: 1.15rem;
+  font-weight: 300;
+  transition: all 0.5s ease;
+}
+li.main-nav-list-item a:hover {
+  color: white;
+}
+
+ul.socials-list {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+li.socials-list-item {
+  transition: all 0.5s ease;
+}
+li.socials-list-item:hover {
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 1170px) {
+  nav {
+    width: 100vw;
+    justify-content: center;
+  }
+  ul.main-nav-list {
+    display: none;
+  }
+  ul.socials-list {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.4784313725);
+    height: 48px;
+    width: 48px;
+  }
+}
+section.main {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text {
+  font-size: 10rem;
+  line-height: 8rem;
+  font-weight: 900;
+  background: linear-gradient(78deg, rgb(255, 97, 134) 0%, rgb(255, 160, 103) 51.04%, rgb(207, 81, 255) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.main-description {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.sponsors-carousel {
+  position: relative;
+  top: 100px;
+  width: 1170px;
+  display: flex;
+  overflow: hidden;
+}
+
+.sponsors-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 100px;
+  margin-left: 100px;
+  animation: slider 15s infinite linear;
+}
+
+.sponsors-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors-carousel:hover .sponsors-list {
+  animation-play-state: paused;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1236px);
+  }
+}
+@media screen and (max-width: 1170px) {
+  .main-text {
+    font-size: 8rem;
+    line-height: 7rem;
+  }
+  .sponsors-carousel {
+    width: 100vw;
+  }
+}
+section.info {
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 29px;
+}
+section.info img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-cards {
+  height: 556px;
+  display: grid;
+  grid-template-areas: "welcome welcome quote quote" "welcome welcome quote quote" "projects35 projects30 quote quote" "projects35 projects30 clubs courses";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.info-sections {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.cool-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: welcome;
+}
+.cool-projects h2 {
+  background: linear-gradient(to right, rgb(240, 147, 251), rgb(245, 87, 108));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 800;
+}
+.cool-projects p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: end;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: quote;
+}
+.quote p.text {
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+  font-weight: 400;
+}
+.quote p.author {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  text-align: end;
+}
+
+.about-proj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: projects35;
+}
+.about-proj p.number {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(224, 195, 252), rgb(142, 197, 252));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-proj p.text {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.about-wins {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: projects30;
+}
+.about-wins p.number {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(67, 233, 123), rgb(56, 249, 215));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-wins p.text {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.clubs {
+  grid-area: clubs;
+}
+.clubs p {
+  background: linear-gradient(to right, rgb(250, 112, 154), rgb(254, 225, 64));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  bottom: 9px;
+}
+.clubs span.number {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.courses {
+  grid-area: courses;
+}
+.courses p {
+  background: linear-gradient(to right, rgb(196, 113, 245), rgb(250, 113, 205));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  bottom: 9px;
+}
+.courses span.number {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+section.projects {
+  margin-top: 150px;
+}
+section.projects h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 90px;
+}
+
+ul.projects-list {
+  width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+}
+
+li.projects-list-item {
+  padding: 24px;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+li.projects-list-item:hover {
+  border: 1px solid linear-gradient(78deg, rgb(42, 42, 42) 20%, rgb(255, 97, 134), rgb(255, 160, 103), rgb(207, 81, 255));
+}
+li.projects-list-item h3 {
+  font-size: 2.25rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: white;
+  white-space: pre-line;
+  margin-top: 24px;
+}
+li.projects-list-item p.hashtags {
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  margin-top: 60px;
+}
+li.projects-list-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+p.more-info {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+p.more-info a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+p.more-info a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease;
+}
+p.more-info a:hover::before {
+  transform: scaleX(1);
+  transform-origin: top left;
+}
+
+section.partners {
+  margin-top: 155px;
+}
+section.partners h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 90px;
+}
+
+ul.partners-logos {
+  display: flex;
+  list-style: none;
+  height: fit-content;
+  margin-bottom: 100px;
+}
+
+li.partner {
+  min-width: 250px;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+li.partner.sber {
+  background-color: white;
+  border-radius: 50%;
+  left: -84px;
+}
+
+li.partner.misis {
+  left: -168px;
+}
+
+li.partner.skolkovo {
+  background-color: rgb(160, 238, 37);
+  border-radius: 50%;
+  left: -252px;
+}
+
+li.partner.vk {
+  left: -336px;
+}
+
+li.partner.and-more {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  left: -336px;
+}
+li.partner.and-more p.number {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  font-weight: 700;
+}
+
+.text-wrapper {
+  display: flex;
+  justify-content: end;
+}
+.text-wrapper p {
+  width: 585px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+}
+
+section.teams {
+  margin-top: 110px;
+}
+section.teams h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 90px;
+}
+
+ul.teams-list {
+  display: grid;
+  gap: 30px;
+  grid-template-rows: repeat(5, 1fr);
+  list-style: none;
+}
+
+li.teams-list-item {
+  position: relative;
+  height: 409px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 36px;
+}
+li.teams-list-item img {
+  width: auto;
+  height: 297px;
+  position: absolute;
+  bottom: 56px;
+}
+li.teams-list-item h3 {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+ul.tag-list {
+  position: absolute;
+  bottom: 36px;
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+
+.tag-list-item {
+  color: rgba(255, 255, 255, 0.36);
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.36);
+  border-radius: 8px;
+}
+
+.teams-list-item.right h3 {
+  text-align: right;
+}
+.teams-list-item.right ul.tag-list {
+  right: 36px;
+}
+.teams-list-item.right img {
+  left: 56px;
+}
+
+.teams-list-item.left h3 {
+  text-align: left;
+}
+.teams-list-item.left ul.tag-list {
+  left: 36px;
+}
+.teams-list-item.left img {
+  right: 56px;
+}
+
+section.mass-media {
+  margin-top: 150px;
+}
+section.mass-media h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 140px;
+}
+
+ul.mass-media-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  list-style: none;
+}
+
+li.mass-media-list-item {
+  height: 436px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+li.mass-media-list-item h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: white;
+  position: absolute;
+  bottom: 44px;
+  width: 500px;
+}
+li.mass-media-list-item img {
+  position: absolute;
+  top: 36px;
+  height: 364px;
+  width: 587px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+li.mass-media-list-item p.media {
+  position: absolute;
+  top: 44px;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: white;
+}
+li.mass-media-list-item.left p {
+  left: 0;
+}
+li.mass-media-list-item.left h3 {
+  left: 0;
+}
+li.mass-media-list-item.left img {
+  right: 0;
+}
+li.mass-media-list-item.right p {
+  right: 0;
+}
+li.mass-media-list-item.right h3 {
+  right: 0;
+}
+li.mass-media-list-item.right img {
+  left: 0;
+}
+
+section.achievements {
+  margin-top: 150px;
+}
+section.achievements h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+ul.year-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+li.year-list-item {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+li.year-list-item:hover {
+  color: white;
+}
+li.year-list-item.selected {
+  color: white;
+  font-weight: 800;
+}
+
+ul.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  list-style: none;
+  font-size: 2rem;
+}
+
+li.achievements-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+li.achievements-list-item p.place {
+  color: white;
+  font-weight: 700;
+}
+
+section.team {
+  margin-top: 150px;
+  width: fit-content;
+}
+section.team h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 140px;
+}
+
+div.team-carousel {
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  width: 1440px;
+  overflow: hidden;
+}
+
+.team-carousel:hover ul.team-list {
+  animation-play-state: paused;
+}
+
+ul.team-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  height: 490px;
+  position: relative;
+  animation: team-slider 25s infinite linear;
+}
+
+@keyframes team-slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2400px);
+  }
+}
+li.team-list-item {
+  min-width: 270px;
+}
+
+div.card-wrapper img {
+  width: 270px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+div.card-wrapper h3.name {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: white;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+div.card-wrapper p.sub {
+  line-height: 1.2rem;
+  margin-left: 2px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.bregman {
+  position: absolute;
+  top: 54px;
+}
+.bregman img {
+  height: 375px;
+}
+
+.efimov {
+  position: absolute;
+  top: 0;
+}
+.efimov img {
+  height: 270px;
+}
+
+.divekha {
+  position: absolute;
+  top: 54px;
+}
+.divekha img {
+  height: 270px;
+}
+
+.kim {
+  position: absolute;
+  top: 19px;
+}
+.kim img {
+  height: 375px;
+}
+
+.malafeev {
+  position: absolute;
+  top: 100px;
+}
+.malafeev img {
+  height: 270px;
+}
+
+.alkheev {
+  position: absolute;
+  top: 54px;
+}
+.alkheev img {
+  height: 375px;
+}
+
+.shubkin {
+  position: absolute;
+  top: 19px;
+}
+.shubkin img {
+  height: 270px;
+}
+
+.stepovoy {
+  position: absolute;
+  top: 0;
+}
+.stepovoy img {
+  height: 375px;
+}
+
+div.quote-wrapper {
+  margin: 0 auto;
+  width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+}
+div.quote-wrapper p {
+  width: 630px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+div.quote-wrapper p.about-us {
+  color: white;
+  width: auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+div.quote-wrapper span.itam {
+  font-weight: 1000;
+  background: linear-gradient(to right, rgb(240, 147, 251), rgb(245, 87, 108));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+section.socials {
+  margin-top: 150px;
+  padding-bottom: 275px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+section.socials h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 140px;
+}
+
+ul.oursocials-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+li.oursocials-list-item {
+  width: 270px;
+  height: 198px;
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  position: relative;
+}
+li.oursocials-list-item h3 {
+  font-size: 1.75rem;
+  color: white;
+}
+li.oursocials-list-item p {
+  font-size: 1.25rem;
+  margin-top: 4px;
+}
+li.oursocials-list-item img {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+footer {
+  width: 1170px;
+  margin: 0 auto;
+  height: 140px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  position: relative;
+}
+footer img.logo {
+  height: 20px;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+footer p.year {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer ul.footer-nav {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  display: flex;
+  list-style: none;
+  gap: 43px;
+}
+footer ul.authors-list {
+  position: absolute;
+  right: 0;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+footer li.authors-list-item {
+  height: 140px;
+}
+footer li.authors-list-item p.name {
+  margin-top: 24px;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 500;
+}
+footer li.authors-list-item img.social {
+  position: absolute;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
