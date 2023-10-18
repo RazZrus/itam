@@ -248,17 +248,27 @@
 		}
 	}
 
-	ul.partners-logos {
+	div.partners-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
-		height: fit-content;
 		margin-bottom: 36px;
+	}
+
+	ul.partners-logos {
+		margin-bottom: 0;
+		width: fit-content;
 		display: grid;
 		gap: 16px;
-		grid-template-columns: repeat(3, minmax(108px, 1fr));
-		grid-template-rows: repeat(2, minmax(108px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 	}
 
 	li.partner {
+		width: auto;
+		height: auto;
 		position: static;
 	}
 
@@ -583,19 +593,12 @@
 
 		img.logo {
 			order: 3;
-			height: 20px;
-			width: 60px;
 			position: static;
-			top: 0;
-			left: 0;
 		}
 
 		p.year {
 			order: 5;
-			color: white;
 			position: static;
-			bottom: 0;
-			left: 0;
 		}
 
 		ul.authors-list {
@@ -613,15 +616,10 @@
 
 			p.name {
 				margin-top: 8px;
-				font-size: 1.25rem;
-				color: white;
-				font-weight: 500;
 			}
 
 			img.social {
 				display: none;
-				position: static;
-				bottom: 0;
 			}
 		}
 	}

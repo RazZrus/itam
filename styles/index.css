@@ -538,7 +538,7 @@ li.teams-list-item {
   padding: 36px;
 }
 li.teams-list-item img {
-  width: clamp(162px, 30vw, 297px);
+  width: clamp(162px, 20vw, 297px);
   height: auto;
   position: absolute;
   bottom: 56px;
@@ -1126,16 +1126,25 @@ footer li.authors-list-item img.social {
     font-size: 2.25rem;
     margin-bottom: 36px;
   }
-  ul.partners-logos {
+  div.partners-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: fit-content;
     margin-bottom: 36px;
+  }
+  ul.partners-logos {
+    margin-bottom: 0;
+    width: fit-content;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(3, minmax(108px, 1fr));
-    grid-template-rows: repeat(2, minmax(108px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
   li.partner {
+    width: auto;
+    height: auto;
     position: static;
   }
   .text-wrapper {
@@ -1397,18 +1406,11 @@ footer li.authors-list-item img.social {
   }
   footer img.logo {
     order: 3;
-    height: 20px;
-    width: 60px;
     position: static;
-    top: 0;
-    left: 0;
   }
   footer p.year {
     order: 5;
-    color: white;
     position: static;
-    bottom: 0;
-    left: 0;
   }
   footer ul.authors-list {
     order: 4;
@@ -1424,14 +1426,9 @@ footer li.authors-list-item img.social {
   }
   footer li.authors-list-item p.name {
     margin-top: 8px;
-    font-size: 1.25rem;
-    color: white;
-    font-weight: 500;
   }
   footer li.authors-list-item img.social {
     display: none;
-    position: static;
-    bottom: 0;
   }
 }
 
