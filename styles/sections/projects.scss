@@ -2,10 +2,6 @@ section.projects {
 	margin-top: 150px;
 
 	h2 {
-		color: white;
-		font-size: 4rem;
-		text-align: center;
-		font-weight: 800;
 		margin-bottom: 90px;
 	}
 }
@@ -14,11 +10,11 @@ ul.projects-list {
 	width: 1170px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
 	gap: 16px;
 }
 
 li.projects-list-item {
+	box-sizing: border-box;
 	padding: 24px;
 	list-style: none;
 	background-color: $grayColor;
@@ -30,17 +26,18 @@ li.projects-list-item {
 	}
 
 	h3 {
-		font-size: 2.25rem;
-		line-height: 3rem;
+		font-size: clamp(1.5rem, 5vw, 2.25rem);
+		line-height: clamp(2rem, 5vw, 3rem);
 		font-weight: 700;
 		color: white;
-		white-space: pre-line;
+		width: fit-content;
 		margin-top: 24px;
 	}
 
 	p.hashtags {
-		font-size: 1.25rem;
-		line-height: 1.7rem;
+		font-size: clamp(0.875rem, 5vw, 1.25rem);
+		line-height: clamp(1rem, 5vw, 1.7rem);
+		width: fit-content;
 		font-weight: 500;
 		margin-top: 60px;
 	}

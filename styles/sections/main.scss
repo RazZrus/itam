@@ -18,9 +18,10 @@ section.main {
 }
 
 .main-description {
+	margin: 0 15px;
 	margin-top: 2rem;
 	text-align: center;
-	font-size: 1.2rem;
+	font-size: 1.25rem;
 }
 
 .sponsors-carousel {
@@ -56,16 +57,5 @@ section.main {
 	}
 	100% {
 		transform: translateX(-1236px);
-	}
-}
-
-@media screen and (max-width: 1170px) {
-	.main-text {
-		font-size: 8rem;
-		line-height: 7rem;
-	}
-
-	.sponsors-carousel {
-		width: 100vw;
 	}
 }

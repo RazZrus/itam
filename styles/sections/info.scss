@@ -4,7 +4,7 @@ section.info {
 	margin-top: 100px;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	gap: 29px;
+	gap: 16px;
 
 	img {
 		width: 100%;
@@ -13,7 +13,6 @@ section.info {
 }
 
 .info-cards {
-	height: 556px;
 	display: grid;
 	grid-template-areas:
 		'welcome welcome quote quote'
@@ -26,6 +25,7 @@ section.info {
 }
 
 .info-sections {
+	box-sizing: border-box;
 	background-color: $grayColor;
 	border-radius: 16px;
 	padding: 28px;
@@ -129,20 +129,26 @@ section.info {
 }
 
 .clubs {
-	p {
+	div.text {
 		background: linear-gradient(to right, rgba(250, 112, 154, 1), rgba(254, 225, 64, 1));
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	p {
 		font-size: 2.25rem;
 		font-weight: 700;
 		text-align: center;
-		position: relative;
-		bottom: 9px;
 	}
 
 	span.number {
 		font-size: 4rem;
+		line-height: 4rem;
 		font-weight: 800;
 	}
 
@@ -150,28 +156,28 @@ section.info {
 }
 
 .courses {
-	p {
+	div.text {
 		background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	p {
 		font-size: 2.25rem;
 		font-weight: 700;
 		text-align: center;
-		position: relative;
-		bottom: 9px;
 	}
 
 	span.number {
 		font-size: 4rem;
+		line-height: 4rem;
 		font-weight: 800;
 	}
 
 	grid-area: courses;
 }
-
-// @media (max-width: 1170px) {
-// 	section {
-// 		width: 100vw;
-// 	}
-// }

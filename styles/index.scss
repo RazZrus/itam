@@ -29,24 +29,9 @@ p {
 	display: none;
 }
 
-img {
-	max-width: 100vw;
-}
-
 section {
 	width: 1170px;
 	margin: 0 auto;
-}
-
-main {
-	height: fit-content;
-	margin: 0 auto;
-}
-
-@media (max-width: 1170px) {
-	section {
-		width: 100vw;
-	}
 }
 
 @import './uikit.scss';
@@ -61,3 +46,4 @@ main {
 @import './sections/team.scss';
 @import './sections/socials.scss';
 @import './footer.scss';
+@import './adaptive.scss';
