@@ -6,7 +6,7 @@
 	}
 
 	section {
-		width: 100vw;
+		width: 100%;
 		box-sizing: border-box;
 		padding: 0 15px;
 	}
@@ -64,7 +64,7 @@
 
 @media (max-width: 866px) {
 	section.info {
-		margin-top: 70px;
+		padding-top: 70px;
 		display: block;
 
 		img {
@@ -197,7 +197,7 @@
 
 @media screen and (max-width: 866px) {
 	section.projects {
-		margin-top: 65px;
+		padding-top: 65px;
 
 		h2 {
 			font-size: 2.25rem;
@@ -240,7 +240,7 @@
 @media screen and (max-width: 866px) {
 	section.partners {
 		width: 100%;
-		margin-top: 65px;
+		padding-top: 65px;
 
 		h2 {
 			font-size: 2.25rem;
@@ -295,7 +295,7 @@
 @media screen and (max-width: 866px) {
 	section.teams {
 		width: 100%;
-		margin-top: 65px;
+		padding-top: 65px;
 
 		h2 {
 			font-size: 2.25rem;
@@ -385,8 +385,8 @@
 		height: clamp(84px, 40vw, 436px);
 
 		h3 {
-			font-size: clamp(1rem, 3vw, 2rem);
-			line-height: clamp(1.25rem, 3vw, 2.5rem);
+			font-size: clamp(0.875rem, 3vw, 2rem);
+			line-height: clamp(1rem, 3vw, 2.5rem);
 			bottom: initial;
 			top: 15px;
 			width: calc(100% * 5 / 9);
