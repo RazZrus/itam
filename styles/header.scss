@@ -24,6 +24,8 @@ a.logo-link {
 }
 
 div.mobile-menu-button {
+	display: none;
+	cursor: pointer;
 	box-sizing: border-box;
 	padding: 10px 5px;
 	position: absolute;
@@ -32,30 +34,71 @@ div.mobile-menu-button {
 	width: 48px;
 	height: 48px;
 	border-radius: 12px;
-	background-color: #777;
+	background-color: rgb(62, 62, 62);
 	flex-direction: column;
+	align-items: center;
 	justify-content: space-between;
+	z-index: 3;
 
 	span {
 		display: block;
-		width: 30px;
+		width: 35px;
 		border-radius: 3px;
 		height: 4px;
 		background: white;
-		transition: all 0.1s ease;
+		transition: all 0.35s ease;
 	}
+}
 
+div.mobile-menu-button.is-active {
 	span:nth-child(2) {
-		width: 38px;
+		opacity: 0;
 	}
 
 	span:nth-child(3) {
-		width: 25px;
+		transform: translateY(-12px) rotate(45deg);
 	}
 
-	&:hover span:nth-child(2) {
-		transform: rotate(45deg);
+	span:nth-child(1) {
+		transform: translateY(12px) rotate(-45deg);
 	}
+}
+
+.mobile-nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: calc(-100%);
+	width: 100%;
+	min-height: 100vh;
+	z-index: 2;
+	background-color: rgba(29, 28, 27, 0.98);
+	transition: all 0.5s ease;
+
+	p.itam {
+		position: absolute;
+		left: 16px;
+		bottom: 90px;
+	}
+
+	&.activated {
+		left: 0;
+	}
+}
+
+.mobile-nav-list {
+	position: absolute;
+	top: 200px;
+	left: 16px;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+.mobile-nav-list-item a {
+	text-decoration: none;
+	font-size: 4rem;
+	color: white;
 }
 
 ul.main-nav-list {

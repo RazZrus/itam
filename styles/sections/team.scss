@@ -1,6 +1,6 @@
 section.team {
 	margin-top: 150px;
-	width: fit-content;
+	width: 100%;
 
 	h2 {
 		margin-bottom: 140px;
@@ -24,7 +24,6 @@ ul.team-list {
 	gap: 30px;
 	list-style: none;
 	height: 490px;
-	position: relative;
 	animation: team-slider 25s infinite linear;
 }
 
