@@ -71,9 +71,10 @@ div.mobile-menu-button.is-active {
 	top: 0;
 	left: calc(-100%);
 	width: 100%;
-	height: calc(100vh + 70px);
+	height: 100vh;
 	z-index: 2;
 	background-color: rgba(29, 28, 27, 0.98);
+	transform: translateY(70px);
 	transition: all 0.5s ease;
 
 	p.itam {
@@ -89,7 +90,7 @@ div.mobile-menu-button.is-active {
 
 .mobile-nav-list {
 	position: absolute;
-	top: 200px;
+	top: 130px;
 	left: 16px;
 	display: flex;
 	flex-direction: column;
