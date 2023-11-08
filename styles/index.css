@@ -112,10 +112,10 @@ div.mobile-menu-button.is-active span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh + 140px);
   z-index: 2;
   background-color: rgba(29, 28, 27, 0.98);
-  transform: translateY(70px);
+  transform: translateY(-70px);
   transition: all 0.5s ease;
 }
 .mobile-nav p.itam {
@@ -129,7 +129,7 @@ div.mobile-menu-button.is-active span:nth-child(1) {
 
 .mobile-nav-list {
   position: absolute;
-  top: 130px;
+  top: 270px;
   left: 16px;
   display: flex;
   flex-direction: column;
