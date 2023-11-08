@@ -20,6 +20,10 @@ p {
   margin: 0;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .hidden {
   display: none;
 }
@@ -62,6 +66,7 @@ a.logo-link {
 }
 
 div.mobile-menu-button {
+  -webkit-tap-highlight-color: transparent;
   display: none;
   cursor: pointer;
   box-sizing: border-box;
@@ -103,7 +108,7 @@ div.mobile-menu-button.is-active span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
-  min-height: 100vh;
+  height: calc(100vh + 70px);
   z-index: 2;
   background-color: rgba(29, 28, 27, 0.98);
   transition: all 0.5s ease;
@@ -111,7 +116,7 @@ div.mobile-menu-button.is-active span:nth-child(1) {
 .mobile-nav p.itam {
   position: absolute;
   left: 16px;
-  bottom: 90px;
+  bottom: 160px;
 }
 .mobile-nav.activated {
   left: 0;

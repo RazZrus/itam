@@ -24,6 +24,7 @@ a.logo-link {
 }
 
 div.mobile-menu-button {
+	-webkit-tap-highlight-color: transparent;
 	display: none;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -70,7 +71,7 @@ div.mobile-menu-button.is-active {
 	top: 0;
 	left: calc(-100%);
 	width: 100%;
-	min-height: 100vh;
+	height: calc(100vh + 70px);
 	z-index: 2;
 	background-color: rgba(29, 28, 27, 0.98);
 	transition: all 0.5s ease;
@@ -78,7 +79,7 @@ div.mobile-menu-button.is-active {
 	p.itam {
 		position: absolute;
 		left: 16px;
-		bottom: 90px;
+		bottom: 160px;
 	}
 
 	&.activated {
